@@ -18,9 +18,9 @@ module Services
     private
 
       def index_of 
-        id = mutation['_id'] 
+        id = mutation[StatementGenerator::ID_IDENTIFIER] 
         src_array.each_with_index do |elem, idx|
-          return idx if elem['_id'] == id
+          return idx if elem[StatementGenerator::ID_IDENTIFIER] == id
         end
         nil
       end
