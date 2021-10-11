@@ -2,7 +2,8 @@ class StatementGeneratorsController < ApplicationController
 
   # POST /generate_update_statement
   def generate_update_statement
-    render json: {:original_document => original_document_param, :mutation_object => mutation_object_param}
+    service = ::Services::StatementGenerator.new(original_document_param.to_h['posts'], mutation_object_param.to_h['posts'], 'posts')
+    render json: service.execute
   end
 
   private
