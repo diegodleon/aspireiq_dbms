@@ -13,14 +13,14 @@ Curl example to hit the API:
         "mutation_object": { "posts": [{"foo": "bar"}] }
     }'
 
-* Author: Diego De Leon
+## Author: Diego De Leon
 
-* Stack:
+## Stack:
   - Ruby 3.0
   - Rails 6.1
   - Docker
 
-* How to run
+## How to run
   - git clone git@github.com:diegodleon/aspireiq_dbms.git
   - cd into project folder
   - docker build . -t aspireiq
@@ -31,11 +31,11 @@ Curl example to hit the API:
   To run a bash inside the container:
   - docker run -it -p 3000:3000 aspireiq bash
 
-* How to run tests
+## How to run tests
   - docker run -it -p 3000:3000 aspireiq bash
   - rspec spec (inside container terminal)
 
-* Considerations
+## Considerations
 
   I kept the time invested in this project to 4 hours as stated in the exercise description. Therefore it is still work in progress for the following aspects:
 
@@ -50,4 +50,3 @@ Curl example to hit the API:
       2. Have workers process the incoming requests in the order which they arrived.
       3. Implement a distributed locking mechanism (such as a Redis key with a TTL) that allows multiple process to signal the document they are mutating in order to prevent other mutators from concurrently mutating the same doc.
     - CI/CD could be easily accomplished using Github Actions and leveraging the containerization provided.
-
