@@ -9,7 +9,7 @@ Curl example to hit the API:
     curl --location --request POST 'localhost:3000/generate_update_statement' \
     --header 'Content-Type: application/json' \
     --data-raw '{
-        "original_document": {"name": "diego", "posts": [{"_id": 2, "value": "two"}, {"_    "value":        "one", "mentions": [{"_id": 3, "name": "Diego"}]}]    
+        "original_document": {"name": "diego", "posts": [{"_id": 2, "value": "two"}, {"_id": 1, "value": "one", "mentions": [{"_id": 3, "name": "Diego"}]}]},
         "mutation_object": { "posts": [{"foo": "bar"}] }
     }'
 
